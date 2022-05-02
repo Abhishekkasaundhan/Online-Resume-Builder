@@ -1,285 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html>
+<html lang="en-us">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+
+    <!-- OPL Demos Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-3920997-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Resume Builder</title>
-  </head>
-  <body>
-    <!-- here goes html code  -->
+    <meta name="description" content="">
+    <meta name="robots" content="noindex, nofollow" />
 
-    <div class="card mx-5 mt-3" id="cv-form">
-      <div class="card-header">
-        <h1 class="text-center my-2">Resume Builder</h1>
-      
+    <!-- The compiled CSS file -->
+    <link rel="stylesheet" href="css/production.css">
 
-      </div>
-      <div class="card-body">
-        <div class="container" >
-        
-          <div class="row">
-            <div class="col-md-6">
-              <!-- first col -->
-              <h3>Personal Information</h3>
+    <!-- Web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 
-              <div class="form-group">
-                <label for="nameField">Your Name</label>
-                <input
-                  type="text"
-                  id="nameField"
-                  placeholder="Enter here"
-                  class="form-control"
-                />
-              </div>
+    <!-- favicon.ico. Place these in the root directory. -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-              <div class="form-group mt-2">
-                <label for="contactField">Your Contact</label>
-                <input
-                  type="text"
-                  id="contactField"
-                  placeholder="Enter here"
-                  class="form-control"
-                />
-              </div>
+</head>
 
-              <div class="form-group mt-2">
-                <label for="addressField">Your Address</label>
-                <textarea
-                  id="addressField"
-                  placeholder="Enter here"
-                  class="form-control"
-                  rows="5"
-                ></textarea>
-              </div>
+<body>
 
-              <div class="form-group mt-3">
-                <label for="">Select your photo</label>
-                <input id="imgField" type="file" class="form-control" />
-              </div>
 
-              <p class="text-secondary my-3">Important Links</p>
+    <!-- Header -->
+    <header class="pt2 pb1 align--center">
+        <div class="container">
+            <p>Welcome to</p>
+            <h1 title="Camp Chippewa">Resume Builder</h1>
+        </div>
+    </header>
 
-              <div class="form-group mt-2">
-                <label for="fbField">Facebook </label>
-                <input
-                  type="text"
-                  id="fbField"
-                  placeholder="Enter here"
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group mt-2">
-                <label for="instaField">Instagram </label>
-                <input
-                  type="text"
-                  id="instaField"
-                  placeholder="Enter here"
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group mt-2">
-                <label for="linkedField">LinkedIn</label>
-                <input
-                  type="text"
-                  id="linkedField"
-                  placeholder="Enter here"
-                  class="form-control"
-                />
-              </div>
-            </div>
-            <div class="col-md-6">
-              <!-- second col -->
-              <h3>Professional Information</h3>
+    <!-- Body -->
+    <main>
 
-              <div class="form-group mt-2">
-                <label for="">Objective</label>
-                <textarea
-                  id="objectiveField"
-                  rows="5"
-                  placeholder="Enter here"
-                  class="form-control"
-                ></textarea>
-              </div>
+        <div class="container">
 
-              <div class="form-group mt-2" id="we">
-                <label for="">Work Experience</label>
-                <textarea
-                  placeholder="Enter here"
-                  class="form-control weField"
-                  rows="3"
-                ></textarea>
+            <!-- Info -->
+            <section class="grid-row grid-row--center">
 
-                <!-- new textarea -->
-
-                <div class="container text-center mt-2" id="weAddButton">
-                  <button
-                    onclick="addNewWEField()"
-                    class="btn btn-primary btn-sm"
-                  >
-                    Add
-                  </button>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-4">
+                    <a href="3/index.html">
+                        <h3>Basic Resume</h3>
+                    </a>
+                    <p>Modern Resume give you a free, modern, professtional resume.</p>
                 </div>
-              </div>
-
-              <div class="form-group mt-2" id="aq">
-                <label for="">Academic Qualification</label>
-                <textarea
-                  placeholder="Enter here"
-                  class="form-control eqField"
-                  rows="3"
-                ></textarea>
-
-                <div class="container text-center mt-2" id="aqAddButton">
-                  <button
-                    onclick="addNewAQField()"
-                    class="btn btn-primary btn-sm"
-                  >
-                    Add
-                  </button>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-3">
+                    <div class="relative">
+                        <a href="3/index.html"><img class="info-image relative z2" src="./img/resume-3.jpg"
+                                alt="Teepe"></a>
+                        <div class="pattern pattern--right-middle absolute z1"></div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="container text-center mt-3">
-            <button onclick="generateCV()" class="btn btn-primary btn-lg">
-              Generate CV
-            </button>
-          </div>
+                <!-- Cabin -->
+                <div class="grid-column span-half pt3 pb3 mobile-m order-1">
+                    <div class="relative">
+                        <a href="1/index.html"><img class="info-image relative z2" src="./img/resume-1.jpeg"
+                                alt="Cabin"></a>
+                        <div class="pattern pattern--left-down absolute z1"></div>
+                    </div>
+                </div>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-2">
+                    <a href="1/index.html">
+                        <h3>Standard Resume</h3>
+                    </a>
+                    <p>Standard Resume gives you a free, modern, professional resume.</p>
+                </div>
+                <!-- Teepees -->
+                <div class="grid-column span-half pt3 pb3 mobile-m order-4">
+                    <a href="2/index.html">
+                        <h3>Modern Resume</h3>
+                    </a>
+                    <p>Modern Resume give you a free, modern, professtional resume.</p>
+                </div>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-3">
+                    <div class="relative">
+                        <a href="2/index.html"><img class="info-image relative z2" src="./img/resume-2.jpeg"
+                                alt="Teepee"></a>
+                        <div class="pattern pattern--right-middle absolute z1"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fishing
+                <div class="grid-column span-half pt3 pb3 mobile-m order-5">
+                    <div class="relative">
+                        <img class="info-image relative z2" src="./img/fishing.jpg" alt="Fishing">
+                        <div class="pattern pattern--left-up absolute z1"></div>
+                    </div>
+                </div>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-6">
+                    <h3>Fishing</h3>
+                    <p>Que Manilium, ab iisque M. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; An eum locum libenter invisit&nbsp;ultimas.</p>
+                </div> 
+                <!-- Archery 
+                <div class="grid-column span-half pt3 pb3 mobile-m order-8">
+                    <h3>Archery</h3>
+                    <p>At ille pellit, qui permulcet sensum voluptate. Quid in isto egregio tuo officio et tanta fide-sic enim existimo-ad corpus refers? Nec vero sum nescius esse utilitatem in&nbsp;historia.</p>
+                </div>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-7">
+                    <div class="relative">
+                        <img class="info-image relative z2" src="./img/archery.jpg" alt="Archery">
+                        <div class="pattern pattern--right-down absolute z1"></div>
+                    </div>
+                </div>
+                <!-- Canoeing 
+                <div class="grid-column span-half pt3 pb3 mobile-m order-9">
+                    <div class="relative">
+                        <img class="info-image relative z2" src="./img/canoeing.jpg" alt="Canoeing">
+                        <div class="pattern pattern--left-middle absolute z1"></div>
+                    </div>
+                </div>
+                <div class="grid-column span-half pt3 pb3 mobile-m order-10">
+                    <h3>Canoeing</h3>
+                    <p>Nam si propter voluptatem, quae est ista laus, quae possit e macello peti? Sin te auctoritas commovebat, nobisne omnibus et Platoni ipsi nescio quem illum&nbsp;anteponebas.</p>
+                </div>
+            </section>
+
         </div>
-      </div class="card-body">
-    </div>
-    <!-- cv template -->
 
-    <div class="container" id="cv-template">
-      <div class="row">
-        <div class="col-md-4 text-center py-5 background">
-          <!-- first col  -->
+        <!-- Pricing 
+        <section class="align--center pt2 pb3">
+            <p class="h2">Rent the whole place for $3,670/night.</p>
+            <p>Maximum of 40 people.</p>
+        </section>
 
-          <img
-            src="https://retailx.com/wp-content/uploads/2019/12/iStock-476085198.jpg"
-            alt=""
-            class="img-fluid myimg"
-            id="imgTemplate"
-          />
-
-          <div class="container">
-            <p id="nameT1">Aman Kumar Tiwari</p>
-            <p id="contactT">+914542454541,+9154564154</p>
-            <p id="addressT">563563/4524152 Sector 35 Noida , INDIA</p>
-
-            <hr />
-
-            <p>
-              <a id="fbT" href="#1"
-                >https://www.facebook.com/LearnCodeWithDurgesh</a
-              >
-            </p>
-            <p>
-              <a id="instaT" href="#1">https://www.instagram.com/Durgesh_k_t</a>
-            </p>
-            <p>
-              <a id="linkedT" href="#1"
-                >https://www.linkedin.com/LearnCodeWithDurgesh</a
-              >
-            </p>
-          </div>
+        <!-- Contact
+        <section class="bg--secondary-color pt3 pb3">
+            <div class="container">
+                <div class="mb2 align--center">
+                    <h3 class="mb1">Contact us to get started</h3>
+                    <p>We'll reply when we get back from&nbsp;fishing.</p>
+                </div>
+                <form>
+                    <div class="grid-row">
+                        <div class="grid-column span-half mt1">
+                            <label class="label" for="name">Name</label>
+                            <input class="form-control" id="name">
+                        </div>
+                        <div class="grid-column span-half mt1">
+                            <label class="label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email">
+                        </div>
+                    </div>
+                    <label class="label mt1" for="dates">Timeline</label>
+                    <input class="form-control" id="dates">
+                    <label class="label mt1" for="message">Message</label>
+                    <textarea class="form-control" id="message"></textarea>
+                    <div class="align--right mt1">
+                        <button class="btn btn--outline">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section> -->
         </div>
-        <div class="col-md-8 py-5">
-          <!-- second col  -->
-          <h1 id="nameT2" class="text-center" style="font-weight: 980">
-            Aman Kumar Tiwari
-          </h1>
+    </main>
 
-          <!-- objective card  -->
-
-          <div class="card mt-4">
-            <div class="card-header background">
-              <h3>Objective</h3>
-            </div>
-            <div class="card-body">
-              <p id="objectiveT">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                quam quos totam dolorem commodi earum, labore consectetur
-                excepturi reiciendis, a fugiat porro rem mollitia inventore
-                eligendi, saepe libero hic aliquam? Iure molestias natus dolore
-                animi, possimus eius! Atque nesciunt eveniet exercitationem enim
-                nisi quis. Consequatur aliquam reiciendis officiis laboriosam
-                numquam?
-              </p>
-            </div>
-          </div>
-
-          <!-- work Experience -->
-
-          <div class="card mt-4">
-            <div class="card-header background">
-              <h3>Work Experience</h3>
-            </div>
-            <div class="card-body">
-              <ul id="weT">
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- academic Qualification  -->
-
-          <div class="card mt-4">
-            <div class="card-header background">
-              <h3>Academic Qualification</h3>
-            </div>
-            <div class="card-body">
-              <ul id="aqT">
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-                <li>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Odit, ad.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="container mt-3 text-center">
-            <button onclick="printCV()" class="btn background">Print CV</button>
-          </div>
+    <!-- Footer -->
+    <footer class="pt2 pb2">
+        <div class="container align--center">
+            <p>Developed & Design by Bakejobs</p>
         </div>
-      </div>
-    </div>
+    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
